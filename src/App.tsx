@@ -1,7 +1,11 @@
+import { Outlet } from "react-router";
+import Navbar from "./Layout/Navbar/Navbar";
+
 function App() {
   return (
-    <div className="w-[1080px] flex mx-auto">
-      <p className="text-blue-700">Hi React</p>
+    <div className="max-w-[1080px] mx-auto text-[16px] text-gray-600">
+      <Navbar></Navbar>
+      <Outlet></Outlet>
     </div>
   );
 }

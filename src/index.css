@@ -1,1 +1,19 @@
 @import "tailwindcss";
+@plugin "daisyui";
+@tailwind utilities;
+
+@layer utilities {
+  .bg-primary1 {
+    background: #52a2cd;
+  }
+  .bg-primary2 {
+    background: #eda100;
+  }
+
+  .text-primary1 {
+    color: #52a2cd;
+  }
+  .text-primary2 {
+    color: #eda100;
+  }
+}
