@@ -43,7 +43,7 @@ const Navbar = () => {
             {listItem}
           </ul>
         </div>
-        <img className="h-12" src="/src/assets/library.png" alt="" />
+        <img className="h-12" src="/public/library.png" alt="" />
         <h1 className=" text-xl px-1 font-bold hover: bg-none">
           <span className="text-[#52a2cd]">Minimal</span>
           <span className="text-[#eda100]"> Library</span>
