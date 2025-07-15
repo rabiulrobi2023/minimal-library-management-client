@@ -12,5 +12,11 @@ export interface IBookRegistration {
   isbn: string;
   description: string;
   copies: number;
-  available: boolean;
+  available?: boolean;
+}
+
+export interface IGetBook
+
+extends IBookRegistration {
+  _id: string;
 }

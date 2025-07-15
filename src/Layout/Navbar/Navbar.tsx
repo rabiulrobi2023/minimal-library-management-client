@@ -1,22 +1,24 @@
+import { Link, NavLink } from "react-router";
+
 const Navbar = () => {
   const listItem = (
     <>
       <li>
-        <a>Home</a>
+        <NavLink to={"/home"}>Home</NavLink>
       </li>
       <li>
-        <a>All Books</a>
+        <NavLink to={"/books"}>All Books</NavLink>
       </li>
       <li>
-        <a>Add Book</a>
+        <NavLink to={"/create-book"}>Add Book</NavLink>
       </li>
       <li>
-        <a>Borrow Summary</a>
+        <NavLink to={"/borrow-summary"}>Borrow Summary</NavLink>
       </li>
     </>
   );
   return (
-    <div className="navbar bg-base-100 justify-between ">
+    <div className="navbar bg-base-100 justify-between p-0">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -43,11 +45,20 @@ const Navbar = () => {
             {listItem}
           </ul>
         </div>
-        <img className="h-12" src="/public/library.png" alt="" />
-        <h1 className=" text-xl px-1 font-bold hover: bg-none">
-          <span className="text-[#52a2cd]">Minimal</span>
-          <span className="text-[#eda100]"> Library</span>
-        </h1>
+        <img
+          className="h-12"
+          src="https://i.ibb.co/1JvHqktw/library.png"
+          alt=""
+        />
+        <div>
+          <Link to={"/"}>
+            {" "}
+            <h1 className=" text-2xl md:text-3xl px-1 font-bold hover: bg-none whitespace-nowrap">
+              <span className="text-[#52a2cd]">Minimal</span>
+              <span className="text-[#eda100]"> Library</span>
+            </h1>
+          </Link>
+        </div>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{listItem}</ul>

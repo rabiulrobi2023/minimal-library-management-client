@@ -1,10 +1,8 @@
 import Banner from "@/Layout/Banner/Banner";
-import { useGetbooksQuery } from "@/redux/api/baseApi";
-import Books from "../Book/Books";
+
+import Books from "../Books/Books";
 
 const Home = () => {
-  const { data } = useGetbooksQuery(undefined);
-  console.log(data);
   return (
     <div>
       <Banner></Banner>
