@@ -158,7 +158,65 @@ This is a library management system. You can add, modify, borrow, and view borro
       export type RootState = ReturnType<typeof store.getState>;
       export type AppDispatch = typeof store.dispatch;
   
+- In hooks.ts write the following code
 
 
+      import { useDispatch, useSelector } from "react-redux";
+      import { AppDispatch, RootState } from "./store";
+      
+      export const useAppDispatch = useDispatch.withTypes<AppDispatch>();
+      export const useAppSelector = useSelector.withTypes<RootState>();
 
+## Folder Structure
+- Create necessary folder like
+    - Layout:
+       - Banner
+       - Footer
+       - Navbar
+    - Pages:
+       - Books
+       - BookDegails
+       - BookTableBody
+       - BookTableRow
+       - BorrowBook
+       - BorroedBooks
+       - CreateBook
+       - Home
+       - Update Book
+    - routes
+        
+## Project Deploy
+After finishing the project you need to deploy the project. You can deploy it in vercel. The setps to deploy in vercel is following:
+
+- Install vercel
+
+      npm i -g vercel
+
+- Now write the following command to login vercel
+
+      vercel login
+- Login your github or google account
+  
+-After that create a file in root directory as name "vercel.json" and write the follwoing code:
+
+
+      {
+    "rewrites": [
+      {
+        "source": "/(.*)",
+        "destination": "/index.html"
+      }
+    ]
+    }
+
+- Write a command to build the project
+
+      npm run build
+
+- Now write the following command to deploy
+
+      vercel --prod
+
+## Live link of this project
+https://minimal-library-management-client-lime.vercel.app/
   
